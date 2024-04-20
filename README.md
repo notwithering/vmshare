@@ -1,28 +1,24 @@
-# VMShare [![MIT License](https://img.shields.io/badge/License-MIT-a10b31)](https://github.com/NotWithering/vmshare/blob/master/LICENSE)
+# VMShare [![MIT License](https://img.shields.io/badge/License-MIT-a10b31)](https://github.com/notwithering/vmshare/blob/main/LICENSE)
 
-**VMShare** is a program that lets you temporarily host files and download them to your virtual machine (VM) without a shared folder
+**VMShare** is a program that just starts an http file server at the 0th argument. VMShare is meant to be used inbetween a host computer and a virtual environment without using shared folders.
 
-![GIF](./assets/evid20231129233907.gif)
-(Sorry for the horrendous quality)
+VMShare acts a read-only shared folder over http.
 
-## Building and running
+![GIF](https://github.com/notwithering/vmshare/assets/124115470/a3cc59ed-6fb9-4ae0-b982-dd65daa720a1)
 
-### Linux
+## Installing
+
 ```bash
-git clone https://github.com/NotWithering/vmshare
-cd vmshare
-```
-```bash
-go build
-./main
+go install github.com/notwithering/vmshare@latest
 ```
 
-### Windows
-```powershell
-git clone https://github.com/NotWithering/vmshare
-cd vmshare
-```
-```powershell
-go build
-.\main.exe
+## Example Usage
+
+```bash
+$ echo "heyy kiddo" > test.txt
+$ vmshare &
+Sharing at http://127.0.0.1:8080
+
+$ curl 127.0.0.1:8080/test.txt
+heyy kiddo
 ```
