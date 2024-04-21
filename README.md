@@ -1,6 +1,6 @@
 # VMShare [![MIT License](https://img.shields.io/badge/License-MIT-a10b31)](https://github.com/notwithering/vmshare/blob/main/LICENSE)
 
-**VMShare** is a program that just starts an http file server at the 0th argument. VMShare is meant to be used inbetween a host computer and a virtual environment without using shared folders.
+**VMShare** is a program that just starts an http file server at the 1st argument. VMShare is meant to be used inbetween a host computer and a virtual environment without using shared folders.
 
 VMShare acts a read-only shared folder over http.
 
